@@ -1,0 +1,33 @@
+{
+  "name": "INVADER",
+  "id": "0",
+  "animations": [
+    {
+      "type": "INVADER_DANCE",
+      "direction": "DOWN",
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 32,
+      "framecount": 2,
+      "speed": 2
+    }
+  ],
+  "skins": [
+    {
+      "name": "green_invader",
+      "texture_file": "sprites/invader1.png",
+      "variant_name": "DEFAULT"
+    },
+	{
+      "name": "red_invader",
+      "texture_file": "sprites/invader2.png",
+      "variant_name": "DEFAULT"
+    },
+	{
+      "name": "blue_invader",
+      "texture_file": "sprites/invader3.png",
+      "variant_name": "DEFAULT"
+    }
+  ]
+}
