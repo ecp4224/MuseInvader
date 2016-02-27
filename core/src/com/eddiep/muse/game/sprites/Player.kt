@@ -5,6 +5,7 @@ import com.eddiep.muse.game.Entity
 
 class Player : Entity("sprites/player.png", 0) {
     var score = 0;
+    var enemy : Player? = null
     override fun onLoad() {
         super.onLoad()
 
@@ -14,6 +15,8 @@ class Player : Entity("sprites/player.png", 0) {
     fun fire() {
         val bullet1 = Bullet(this)
         val bullet2 = Bullet(this)
+        bullet1.enemy = enemy
+        bullet2.enemy = enemy
 
         bullet1.y = y + (height / 2f)
         bullet2.y = y + (height / 2f)

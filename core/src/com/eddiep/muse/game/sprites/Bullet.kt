@@ -6,6 +6,7 @@ import com.eddiep.muse.utils.Vector2f
 
 class Bullet(val player: Player) : Entity("sprites/ball.png", 0) {
 
+    var enemy : Player? = null
     override fun onLoad() {
         super.onLoad()
 
@@ -28,6 +29,14 @@ class Bullet(val player: Player) : Entity("sprites/ball.png", 0) {
                 player.score += (invader.y / 4).toInt()
                 parentScene.removeEntity(this)
                 break
+            }
+        }
+
+        if (enemy != null) {
+            val e = enemy as Player
+            if (Math.abs(x - e.x) < 32f && Math.abs(y - e.y) < 32f) {
+                player.score += 100
+                parentScene.removeEntity(this)
             }
         }
     }
